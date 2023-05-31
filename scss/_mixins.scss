@@ -1,0 +1,67 @@
+// Import Variables
+@use 'variables';
+
+@mixin center-items{
+    display: grid;
+    place-items: center;
+}
+
+@mixin size-content($width, $height){
+    width: $width;
+    height: $height;
+}
+// 1 and 2 Style
+@mixin number-style{
+    @include size-content(56px, 140px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 64px 0;
+}
+
+@mixin line-style{
+    @include size-content(0, 84px);
+    border: solid 1px variables.$gray;
+    opacity: 0.25;
+}
+
+@mixin circle-style{
+    @include center-items;
+    border: solid 1px rgba(135,135,157,0.25);
+    @include size-content(56px, 56px);
+    border-radius: 29px;
+    background-color: variables.$white;
+    p{
+        color: variables.$gray;
+        font-weight: 900;
+    } 
+}
+
+// Button style
+@mixin button-style($bg-color, $text-color, $padding){
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding;
+    font-weight: 900;
+    border-radius: 29px;
+    border: solid 1px $bg-color;
+}
+
+//Text Style
+@mixin text-style($font-size, $line-height, $text-color, $padding){
+    font-size: $font-size;
+    line-height: $line-height;
+    text-align: center;
+    color: $text-color;
+    padding: $padding;
+
+}
+
+// Footer Different Size
+@mixin footer-bg-style($bg-size, $bg-image){
+    background: linear-gradient(rgba(77, 150, 169,0.9),rgba(77, 150, 169, 0.9)), $bg-image;
+    background-size: $bg-size;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}

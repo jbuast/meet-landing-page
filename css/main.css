@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Red Hat Display";
+}
+
+.container-top .top-image .top-logo {
+  display: grid;
+  place-items: center;
+  padding: 48px 0 54px 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+}
+.container-top .top-image .top-image-desktop {
+  display: none;
+}
+.container-top .top-image .top-image-mobile {
+  display: grid;
+  place-content: center;
+}
+.container-top .top-image .top-image-mobile img {
+  width: 414px;
+  height: 153px;
+  padding: 0 0 48px 0;
+}
+.container-top .top-context {
+  display: grid;
+  place-items: center;
+}
+.container-top .top-context h1 {
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  text-align: center;
+  color: #28283D;
+  padding: 0 0 24px 0;
+}
+.container-top .top-context p {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  text-align: center;
+  color: #87879D;
+  padding: 0 24px 32px 24px;
+}
+.container-top .top-context .context-optionBtn {
+  display: grid;
+  place-items: center;
+  padding: 0 0 64px 0;
+}
+.container-top .top-context .context-optionBtn .download-btn {
+  padding: 0 0 16px 0;
+}
+.container-top .top-context .context-optionBtn .download-btn button {
+  background-color: #4D96A9;
+  color: #FAFAFA;
+  padding: 16px 40px;
+  font-weight: 900;
+  border-radius: 29px;
+  border: solid 1px #4D96A9;
+}
+.container-top .top-context .context-optionBtn .download-btn button span {
+  color: #8FE3F9;
+}
+.container-top .top-context .context-optionBtn .question-btn button {
+  background-color: #855FB1;
+  color: #FAFAFA;
+  padding: 16px 29px;
+  font-weight: 900;
+  border-radius: 29px;
+  border: solid 1px #855FB1;
+}
+
+.container-middle {
+  display: grid;
+  place-items: center;
+}
+.container-middle .middle-one {
+  width: 56px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 64px 0;
+}
+.container-middle .middle-one .one-line {
+  width: 0;
+  height: 84px;
+  border: solid 1px #87879D;
+  opacity: 0.25;
+}
+.container-middle .middle-one .one-circle {
+  display: grid;
+  place-items: center;
+  border: solid 1px rgba(135, 135, 157, 0.25);
+  width: 56px;
+  height: 56px;
+  border-radius: 29px;
+  background-color: #FAFAFA;
+}
+.container-middle .middle-one .one-circle p {
+  color: #87879D;
+  font-weight: 900;
+}
+.container-middle .middle-image {
+  display: grid;
+  grid-template-rows: repeat(2, 143px);
+  grid-template-columns: repeat(2, 151px);
+  row-gap: 24px;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  padding: 0 0 64px 0;
+}
+.container-middle .middle-image .grid-image {
+  border-radius: 10px;
+}
+.container-middle .middle-image .one {
+  background-image: url("../assets/desktop/image-woman-in-videocall.jpg");
+  background-size: cover;
+}
+.container-middle .middle-image .two {
+  background-image: url("../assets/desktop/image-women-videochatting.jpg");
+  background-size: cover;
+}
+.container-middle .middle-image .three {
+  background-image: url("../assets/desktop/image-men-in-meeting.jpg");
+  background-size: cover;
+}
+.container-middle .middle-image .four {
+  background-image: url("../assets/desktop/image-man-texting.jpg");
+  background-size: cover;
+}
+.container-middle .middle-context {
+  display: grid;
+  place-items: center;
+}
+.container-middle .middle-context .context-header {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #4D96A9;
+  padding: 0 0 24px 0;
+}
+.container-middle .middle-context h1 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  text-align: center;
+  color: #28283D;
+  padding: 0 24px 32px 24px;
+}
+.container-middle .middle-context .context-text {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  text-align: center;
+  color: #87879D;
+  padding: 0 24px 64px 24px;
+}
+
+footer {
+  width: auto;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)), url("../assets/mobile/image-footer.jpg");
+  background-size: auto 428px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+footer .footer-two {
+  width: 56px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 64px 0;
+}
+footer .footer-two .two-line {
+  width: 0;
+  height: 84px;
+  border: solid 1px #87879D;
+  opacity: 0.25;
+}
+footer .footer-two .two-circle {
+  display: grid;
+  place-items: center;
+  border: solid 1px rgba(135, 135, 157, 0.25);
+  width: 56px;
+  height: 56px;
+  border-radius: 29px;
+  background-color: #FAFAFA;
+}
+footer .footer-two .two-circle p {
+  color: #87879D;
+  font-weight: 900;
+}
+footer .footer-context {
+  display: grid;
+  place-items: center;
+}
+footer .footer-context h1 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  text-align: center;
+  color: #FAFAFA;
+  padding: 0 0 24px 0;
+}
+footer .footer-context p {
+  font-size: 1.125rem;
+  line-height: 1.1625rem;
+  text-align: center;
+  color: #FAFAFA;
+  padding: 0 24px 32px 24px;
+}
+footer .footer-context button {
+  background-color: #855FB1;
+  color: #FAFAFA;
+  padding: 16px 40px;
+  font-weight: 900;
+  border-radius: 29px;
+  border: solid 1px #855FB1;
+}
+footer .footer-context button span {
+  color: #D9B8FF;
+}/*# sourceMappingURL=main.css.map */

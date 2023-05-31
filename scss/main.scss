@@ -1,0 +1,175 @@
+// Import variables and mixin file
+@use 'variables';
+@use 'mixins';
+
+// Import Font Family
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
+
+// Mobile View
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    min-height: 100vh;
+    font-family: variables.$primary-font;
+}
+// Container Top
+.container-top{
+    .top-image{
+        .top-logo{
+            @include mixins.center-items;
+            padding: 48px 0 54px 0;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.30));
+        }
+       
+        .top-image-desktop{
+            display: none;
+        }
+        .top-image-mobile{
+            display: grid;
+            place-content: center;
+            img{
+                @include mixins.size-content(414px, 153px);
+                padding: 0 0 48px 0;
+            }   
+        }
+    }
+    .top-context{
+        @include mixins.center-items;
+    
+        h1{
+            @include mixins.text-style(2.5rem, 2.75rem, variables.$black, 0 0 24px 0);
+        }
+        p{
+            @include mixins.text-style(1rem, 1.625rem, variables.$gray, 0 24px 32px 24px);
+        
+        }
+        .context-optionBtn{
+            @include mixins.center-items;
+            padding: 0 0 64px 0;
+            
+            .download-btn{
+                padding: 0 0 16px 0;
+                button{
+                    @include mixins.button-style(variables.$blue, variables.$white, 16px 40px);
+                    span{
+                        color: variables.$blue-hover;
+                    }
+                } 
+            }
+            .question-btn{
+                button{
+                    @include mixins.button-style(variables.$violet, variables.$white, 16px 29px);
+                }
+            }
+    
+        }
+    }
+}
+
+
+// Container Middle
+.container-middle{
+    @include mixins.center-items;
+
+    .middle-one{
+        @include mixins.number-style;
+
+        .one-line{
+            @include mixins.line-style
+        }
+        .one-circle{
+           @include mixins.circle-style
+        }
+    }
+    
+    .middle-image{
+        display: grid;
+        grid-template-rows: repeat(2, 143px);
+        grid-template-columns: repeat(2, 151px);
+        row-gap: 24px;
+        column-gap: 25px;
+        padding: 0 0 64px 0;
+        .grid-image{
+            border-radius: 10px;
+        }
+        .one{
+            background-image: url('../assets/desktop/image-woman-in-videocall.jpg');
+            background-size: cover;
+        }
+        .two{
+            background-image: url('../assets/desktop/image-women-videochatting.jpg');
+            background-size: cover;
+        }
+        .three{
+            background-image: url('../assets/desktop/image-men-in-meeting.jpg');
+            background-size: cover;
+        }
+        .four{
+            background-image: url('../assets/desktop/image-man-texting.jpg');
+            background-size: cover;
+        }
+        
+    }
+    
+    .middle-context{
+        @include mixins.center-items;
+
+        .context-header{
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: variables.$blue;
+            padding: 0 0 24px 0;
+        }
+        h1{
+            @include mixins.text-style(2rem, 2.25rem, variables.$black, 0 24px 32px 24px);
+        }
+        .context-text{
+            @include mixins.text-style(1rem, 1.625rem, variables.$gray, 0 24px 64px 24px);
+        }
+    }
+}   
+
+// Footer
+footer{
+    @include mixins.size-content(auto, 540px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mixins.footer-bg-style(auto 428px, url('../assets/mobile/image-footer.jpg'));
+    
+    .footer-two{
+        @include mixins.number-style;
+        .two-line{
+            @include mixins.line-style
+        }
+        .two-circle{
+           @include mixins.circle-style
+        }
+    }
+    .footer-context{
+        @include mixins.center-items;
+        
+        
+        h1{
+            @include mixins.text-style(2rem, 2.25rem, variables.$white, 0 0 24px 0);
+        }
+        p{
+            @include mixins.text-style(1.125rem, 1.1625rem, variables.$white, 0 24px 32px 24px);
+        }
+        button{
+            @include mixins.button-style(variables.$violet, variables.$white, 16px 40px);
+            span{
+                color: variables.$violet-hover;
+            }
+        }
+    }
+}
+
+
+
+
